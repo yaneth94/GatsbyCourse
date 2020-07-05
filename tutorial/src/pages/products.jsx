@@ -1,9 +1,10 @@
-import React from 'react'
+import React from "react"
+import { Layout } from "../components/Layout"
 
 export default function Products() {
-    return (
-        <div>
-            <h1>This is products page</h1>
-        </div>
-    )
+  return (
+    <Layout>
+      <h1>This is products page</h1>
+    </Layout>
+  )
 }
