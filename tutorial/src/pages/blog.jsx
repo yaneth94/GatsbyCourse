@@ -2,7 +2,7 @@ import React from "react"
 import { Layout } from "../components/Layout"
 import styles from "../components/blog.module.css"
 
-console.log(styles)
+//console.log(styles)
 export default function Blog() {
   return (
     <Layout>
