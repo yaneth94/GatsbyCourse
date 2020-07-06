@@ -12,3 +12,93 @@ RENOMBRAMIENTO
     }
   }
 }
+
+DOCUMENTOS DE IMAGENES CON FILESYSTEM
+{
+  allFile {
+    totalCount
+    edges{
+      node {
+       size
+        absolutePath
+        birthTime
+      }
+    }
+  }
+}
+
+LIMIT
+{
+  allFile(limit:2) {
+    totalCount
+    edges{
+      node {
+       size
+        absolutePath
+        birthTime
+      }
+    }
+  }
+}
+eliminar los anteriores 
+{
+  allFile(skip:2) {
+    totalCount
+    edges{
+      node {
+       size
+        absolutePath
+        birthTime
+      }
+    }
+  }
+}
+
+ordenar por tamaño
+{
+  allFile(sort:{fields:size,order: DESC}) {
+    totalCount
+    edges{
+      node {
+       size
+        absolutePath
+        birthTime
+      }
+    }
+  }
+}
+FILTRADO
+{
+  allFile(filter:{relativeDirectory:{eq:"copy"}}) {
+    totalCount
+    edges{
+      node {
+       size
+        absolutePath
+        birthTime
+      }
+    }
+  }
+}
+BUSQUEDA EN ESPECIFICA
+{
+  file(relativePath:{eq:"image-2.jpeg"}){
+    relativePath
+    size
+  }
+}
+
+FILTRADO POR CARPETA
+{
+  allFile(filter:{sourceInstanceName:{eq:"posts"}}){
+    totalCount
+    edges{
+      node{
+        relativePath
+      }
+    }
+  }
+}
+
+
+
