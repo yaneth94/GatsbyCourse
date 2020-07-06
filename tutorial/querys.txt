@@ -1,0 +1,14 @@
+RENOMBRAMIENTO
+{
+  jhonsite:site {
+    siteMetadata {
+      data {
+        name
+        age
+      }
+      description
+      websiteauthor:author
+      title
+    }
+  }
+}
