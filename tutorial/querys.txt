@@ -100,5 +100,23 @@ FILTRADO POR CARPETA
   }
 }
 
+IMAGENES
+{
+  fixed: file(relativePath:{eq:"image-1.jpeg"}){
+    childImageSharp{
+      fixed(width:300,height:150){
+        src
+      }
+    }
+  }
+  fluid: file(relativePath:{eq: "image-2.jpeg"}){
+    childImageSharp{
+      fluid{
+        src
+        srcSet
+      }
+    }
+  }
+}
 
 
