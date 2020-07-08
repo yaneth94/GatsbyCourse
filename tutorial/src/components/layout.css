@@ -1,5 +1,12 @@
+@import url("https://fonts.googleapis.com/css?family=Roboto&display=swap");
+* {
+    margin: 0;
+    box-sizing: border-box;
+}
+
 body {
-    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    font-family: "Roboto", sans-serif;
+    color: #222;
 }
 
 .title {
