@@ -7,7 +7,6 @@ export default function Tours({ data }) {
   //console.log(data)
   return (
     <Layout>
-      <h1>Our Tour</h1>
       <ToursComponent tours={data.tours.edges}></ToursComponent>
     </Layout>
   )

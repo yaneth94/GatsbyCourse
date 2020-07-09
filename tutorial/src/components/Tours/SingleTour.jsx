@@ -3,6 +3,7 @@ import { FaMap } from "react-icons/fa"
 import Image from "gatsby-image"
 import styles from "../../css/tour.module.css"
 import { Link } from "gatsby"
+import PropTypes from "prop-types"
 
 export const SingleTour = ({ tour }) => {
   const { name, price, country, days, slug, images } = tour
@@ -30,4 +31,14 @@ export const SingleTour = ({ tour }) => {
       </div>
     </article>
   )
+}
+
+SingleTour.propTypes = {
+  tour: PropTypes.shape({
+    name: PropTypes.string.isRequired,
+    country: PropTypes.string.isRequired,
+    price: PropTypes.number.isRequired,
+    days: PropTypes.number.isRequired,
+    images: PropTypes.arrayOf(PropTypes.object).isRequired,
+  }),
 }

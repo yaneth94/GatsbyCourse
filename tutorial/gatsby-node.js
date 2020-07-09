@@ -1,4 +1,4 @@
-exports.onCreatePage = async ({ page, actions }) => {
+/*exports.onCreatePage = async ({ page, actions }) => {
   const { createPage, deletePage } = actions
 
   // Check if the page is a localized 404
@@ -14,4 +14,29 @@ exports.onCreatePage = async ({ page, actions }) => {
     deletePage(oldPage)
     createPage(page)
   }
+}*/
+
+//para crear paginas dinamicamente
+exports.createPage = async({ actions, graphql }) => {
+    const { createPage } = actions
+    const { data } = await graphql(`
+    query {
+      tours: allContentfulTour {
+        edges {
+          node {
+            slug
+          }
+        }
+      }
+    }
+  `)
+    data.tours.edges.forEach(({ node }) => {
+        createPage({
+            path: `tours/${node.slug}`,
+            component: path.resolve("./src/templates/tour-template.js"),
+            context: {
+                slug: node.slug,
+            },
+        })
+    })
 }
