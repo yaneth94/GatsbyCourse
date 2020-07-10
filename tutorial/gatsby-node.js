@@ -17,7 +17,8 @@
 }*/
 
 //para crear paginas dinamicamente
-exports.createPage = async({ actions, graphql }) => {
+const path = require("path")
+exports.createPages = async({ actions, graphql }) => {
     const { createPage } = actions
     const { data } = await graphql(`
     query {
@@ -33,7 +34,7 @@ exports.createPage = async({ actions, graphql }) => {
     data.tours.edges.forEach(({ node }) => {
         createPage({
             path: `tours/${node.slug}`,
-            component: path.resolve("./src/templates/tour-template.js"),
+            component: path.resolve("./src/templates/tour-template.jsx"),
             context: {
                 slug: node.slug,
             },
