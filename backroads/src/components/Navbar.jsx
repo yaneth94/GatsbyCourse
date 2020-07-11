@@ -1,12 +1,13 @@
 import React from "react"
-//import "./navbar.css"
-import styles from "./navbar.module.css"
+import { Link } from "gatsby"
+import { FaRProject } from "react-icons/fa"
 
 const Navbar = () => {
   return (
-    <div className={styles.navbar}>
+    <div>
       <h1>i'm navbar</h1>
-      <div className={styles.links}>i'm navbar link</div>
+      <Link to="/">Home</Link>
+      <Link to="/rooms">Rooms</Link>
     </div>
   )
 }
