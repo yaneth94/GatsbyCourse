@@ -1,9 +1,12 @@
-import React from 'react'
+import React from "react"
+//import "./navbar.css"
+import styles from "./navbar.module.css"
 
 const Navbar = () => {
   return (
-    <div>
+    <div className={styles.navbar}>
       <h1>i'm navbar</h1>
+      <div className={styles.links}>i'm navbar link</div>
     </div>
   )
 }
