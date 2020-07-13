@@ -1,12 +1,13 @@
-import React, { Component } from "react"
-import Layout from "../components/Layout"
-import Button from "../examples/Button"
+import React, { Component } from 'react'
+import Layout from '../components/Layout'
+/*import Button from "../examples/Button"*/
 
 class tours extends Component {
-  render() {
+  render () {
     return (
       <Layout>
         hello from tours page !!!
+        {/*
         <div>
           <Button letter="red" background="black">
             first button
@@ -15,6 +16,7 @@ class tours extends Component {
             second button
           </Button>
         </div>
+        */}
       </Layout>
     )
   }
