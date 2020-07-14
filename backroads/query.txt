@@ -1,0 +1,24 @@
+{
+  site{
+    siteMetadata{
+      author
+      data
+      description
+      title
+    }
+  }
+}
+
+{
+  site{
+    siteMetadata{
+      author
+      data{
+        name
+        age
+      }
+      description
+      title
+    }
+  }
+}
