@@ -22,3 +22,67 @@
     }
   }
 }
+
+CON FILESYSTEM EL PLUGIN
+{
+  allFile{
+    totalCount
+    edges{
+      node{
+        size
+        absolutePath
+        birthTime
+      }
+    }
+  }
+}
+
+arguments with FILESYSTEM
+
+{
+  allFile(limit:4){
+    totalCount
+    edges{
+      node{
+        size
+        absolutePath
+        birthTime
+      }
+    }
+  }
+}
+
+este quita dos del final
+{
+  allFile(skip: 2){
+    totalCount
+    edges{
+      node{
+        size
+        absolutePath
+        birthTime
+      }
+    }
+  }
+}
+FILTRADO POR RELATIVE PATH
+{
+  allFile(filter:{relativeDirectory:{eq:"tour-images"}}){
+    totalCount
+    edges{
+      node{
+        size
+        absolutePath
+        birthTime
+      }
+    }
+  }
+}
+
+BUSCANDO SOLO UN ELEMENTO
+{
+  file(relativePath:{eq:"defaultBcg.jpeg"}){
+    size
+    relativePath
+  }
+}
