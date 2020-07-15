@@ -86,3 +86,21 @@ BUSCANDO SOLO UN ELEMENTO
     relativePath
   }
 }
+
+MANEJO DE IMAGENES
+{
+  fixed: file(relativePath: {eq: "defaultBcg.jpeg"}){
+    childImageSharp{
+      fixed(width:300,height:400){
+        src
+      }
+    }
+  }
+  fluid: file( relativePath: {eq: "blogBcg.jpeg"}){
+    childImageSharp{
+      fluid{
+        src
+      }
+    }
+  }
+}
