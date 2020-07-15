@@ -5,12 +5,16 @@ import Layout from "../components/Layout"
 /*import Header from "../examples/Header"*/
 //use StaticQuery
 /*import RegularHeader from "../examples/RegularHeader"*/
+import StyledHero from "../components/StyledHero"
+import { graphql } from "gatsby"
 
 class tours extends Component {
   render() {
     return (
       <Layout>
-        hello from tours page !!!
+        <StyledHero
+          img={this.props.data.defaultBcg.childImageSharp.fluid}
+        ></StyledHero>
         {/*
         <div>
           <Button letter="red" background="black">
@@ -29,3 +33,15 @@ class tours extends Component {
 }
 
 export default tours
+
+export const query = graphql`
+  query {
+    defaultBcg: file(relativePath: { eq: "defaultBcg.jpeg" }) {
+      childImageSharp {
+        fluid(quality: 90, maxWidth: 4160) {
+          ...GatsbyImageSharpFluid_withWebp
+        }
+      }
+    }
+  }
+`
