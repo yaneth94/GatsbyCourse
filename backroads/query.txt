@@ -104,3 +104,62 @@ MANEJO DE IMAGENES
     }
   }
 }
+
+CONTENTUL
+{
+  allContentfulTour{
+    edges{
+      node{
+        name
+      }
+    }
+  }
+}
+query{
+  tours:allContentfulTour{
+    edges{
+      node{
+        slug
+      }
+    }
+  }
+}
+
+query{
+  tours:allContentfulTour{
+    edges{
+      node{
+        name
+        price
+        slug
+        country
+        contentful_id
+        days
+        images{
+          fluid{
+            src
+          }
+        }
+      }
+    }
+  }
+}
+query{
+  featuresTours:allContentfulTour(filter:{featured:{eq:true}}){
+    edges{
+      node{
+        name
+        price
+        slug
+        country
+        contentful_id
+        days
+        images{
+          fluid{
+            src
+          }
+        }
+      }
+    }
+  }
+}
