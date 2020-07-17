@@ -13,6 +13,9 @@ module.exports = {
         title: "BackRoads",
         description: "Explore awesome worldwide tours & discover what makes each of them unique. Forget your daily routine & say yes to adventure",
         author: "@johndoe",
+        twitterUsername: "@john_smilga",
+        image: "defaultBcg.jpeg",
+        siteUrl: "https://gatsby-backroad-project.netlify.com",
         data: {
             name: "jhon",
             age: 24,
@@ -39,5 +42,6 @@ module.exports = {
         `gatsby-plugin-sass`,
         `gatsby-plugin-styled-components`,
         `gatsby-plugin-playground`,
+        `gatsby-plugin-react-helmet`,
     ],
 }

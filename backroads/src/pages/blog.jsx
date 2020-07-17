@@ -1,13 +1,15 @@
-import React from 'react'
-import Layout from '../components/Layout'
+import React from "react"
+import Layout from "../components/Layout"
 /*import Images from "../examples/Images"*/
-import StyledHero from '../components/StyledHero'
-import { graphql } from 'gatsby'
-import BlogList from '../components/Blog/BlogList'
+import StyledHero from "../components/StyledHero"
+import { graphql } from "gatsby"
+import BlogList from "../components/Blog/BlogList"
+import SEO from "../components/SEO"
 
 const blog = ({ data }) => {
   return (
     <Layout>
+      <SEO title="blog" description="this is description"></SEO>
       <StyledHero img={data.blogBcg.childImageSharp.fluid}></StyledHero>
       {/*<h1> title: {data.site.siteMetadata.title}</h1>*/}
       {/*<Images></Images>*/}

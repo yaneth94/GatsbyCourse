@@ -1,18 +1,20 @@
-import React, { Component } from 'react'
-import Layout from '../components/Layout'
+import React, { Component } from "react"
+import Layout from "../components/Layout"
 /*import Button from "../examples/Button"*/
 //use useStaticQuery
 /*import Header from "../examples/Header"*/
 //use StaticQuery
 /*import RegularHeader from "../examples/RegularHeader"*/
-import StyledHero from '../components/StyledHero'
-import { graphql } from 'gatsby'
-import Tours from '../components/Tours/Tours'
+import StyledHero from "../components/StyledHero"
+import { graphql } from "gatsby"
+import Tours from "../components/Tours/Tours"
+import SEO from "../components/SEO"
 
 class tours extends Component {
-  render () {
+  render() {
     return (
       <Layout>
+        <SEO title="tours" description="this is description"></SEO>
         <StyledHero
           img={this.props.data.defaultBcg.childImageSharp.fluid}
         ></StyledHero>

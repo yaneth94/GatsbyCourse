@@ -29,12 +29,13 @@ const Header = () => {
     },
   } = data*/
   console.log(author)
-  return (
+  return {
+    /*
     <div>
       <h1>title: {title}</h1>
       <h1> author:{author} </h1>
-    </div>
-  )
+    </div>*/
+  }
 }
 
 export default Header
