@@ -163,3 +163,39 @@ query{
     }
   }
 }
+
+QUERY VARIABLES
+{
+  "slug":"hounted-tokyo"
+}
+
+query($slug:String){
+  contentfulTour(slug:{eq:$slug}){
+    name
+    price
+    country
+    days
+  }
+}
+
+query($slug:String){
+  contentfulTour(slug:{eq:$slug}){
+    name
+    price
+    country
+    days
+    start(formatString:"dddd MMMM Do. YYYY")
+    description{
+      description
+    }
+    journey{
+      day
+      info
+    }
+    images{
+      fluid{
+        src
+      }
+    }
+  }
+}
