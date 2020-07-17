@@ -1,15 +1,16 @@
-import React from "react"
-import Layout from "../components/Layout"
+import React from 'react'
+import Layout from '../components/Layout'
 //import SimpleHero from "../components/SimpleHero"
-import Banner from "../components/Banner"
+import Banner from '../components/Banner'
 //import { Link } from "gatsby"
-import About from "../components/Home/About"
-import Services from "../components/Home/Services"
-import StyledHero from "../components/StyledHero"
-import { graphql } from "gatsby"
-import AniLink from "gatsby-plugin-transition-link/AniLink"
+import About from '../components/Home/About'
+import Services from '../components/Home/Services'
+import StyledHero from '../components/StyledHero'
+import { graphql } from 'gatsby'
+import AniLink from 'gatsby-plugin-transition-link/AniLink'
+import FeaturedTours from '../components/Home/FeaturedTours'
 
-export default function Home({ data }) {
+export default function Home ({ data }) {
   return (
     <Layout>
       {/*
@@ -24,18 +25,19 @@ export default function Home({ data }) {
         </Banner>
       </SimpleHero>
       */}
-      <StyledHero home="true" img={data.defaultBcg.childImageSharp.fluid}>
+      <StyledHero home='true' img={data.defaultBcg.childImageSharp.fluid}>
         <Banner
-          title="continue exploring"
-          info=" Lorem ipsum dolor sit amet consectetur adipisicing elit. Eius, officiis."
+          title='continue exploring'
+          info=' Lorem ipsum dolor sit amet consectetur adipisicing elit. Eius, officiis.'
         >
-          <AniLink fade to="/tours" className="btn-white">
+          <AniLink fade to='/tours' className='btn-white'>
             explore tours
           </AniLink>
         </Banner>
       </StyledHero>
       <About></About>
       <Services></Services>
+      <FeaturedTours></FeaturedTours>
     </Layout>
   )
 }

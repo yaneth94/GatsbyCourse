@@ -1,15 +1,16 @@
-import React, { Component } from "react"
-import Layout from "../components/Layout"
+import React, { Component } from 'react'
+import Layout from '../components/Layout'
 /*import Button from "../examples/Button"*/
 //use useStaticQuery
 /*import Header from "../examples/Header"*/
 //use StaticQuery
 /*import RegularHeader from "../examples/RegularHeader"*/
-import StyledHero from "../components/StyledHero"
-import { graphql } from "gatsby"
+import StyledHero from '../components/StyledHero'
+import { graphql } from 'gatsby'
+import Tours from '../components/Tours/Tours'
 
 class tours extends Component {
-  render() {
+  render () {
     return (
       <Layout>
         <StyledHero
@@ -27,6 +28,7 @@ class tours extends Component {
         */}
         {/*<Header></Header>
         <RegularHeader></RegularHeader>*/}
+        <Tours></Tours>
       </Layout>
     )
   }
