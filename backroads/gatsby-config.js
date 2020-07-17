@@ -36,6 +36,14 @@ module.exports = {
                 accessToken: process.env.CONTENTFUL_ACCESS_TOKEN,
             },
         },
+        {
+            resolve: "gatsby-plugin-robots-txt",
+            options: {
+                host: "https://gatsby-backroad-project.netlify.com",
+                sitemap: "https://gatsby-backroad-project.netlify.com/sitemap.xml",
+                policy: [{ userAgent: "*", allow: "/" }],
+            },
+        },
         `gatsby-transformer-sharp`,
         `gatsby-plugin-transition-link`,
         `gatsby-plugin-sharp`,
@@ -43,5 +51,6 @@ module.exports = {
         `gatsby-plugin-styled-components`,
         `gatsby-plugin-playground`,
         `gatsby-plugin-react-helmet`,
+        `gatsby-plugin-sitemap`,
     ],
 }
