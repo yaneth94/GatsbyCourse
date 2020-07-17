@@ -199,3 +199,42 @@ query($slug:String){
     }
   }
 }
+
+POSTS
+query{
+  posts: allContentfulPost{
+    edges{
+      node{
+        published(formatString:"dddd MMMM Do. YYYY")
+        title
+        slug
+        id: contentful_id
+        image{
+          fluid{
+            src
+          }
+        }
+      }
+    }
+  }
+}
+
+
+query{
+  posts: allContentfulPost(sort:{fields:published,order:ASC }){
+    edges{
+      node{
+        published(formatString:"dddd MMMM Do. YYYY")
+        createdAt(formatString:"LLLL")
+        title
+        slug
+        id: contentful_id
+        image{
+          fluid{
+            src
+          }
+        }
+      }
+    }
+  }
+}

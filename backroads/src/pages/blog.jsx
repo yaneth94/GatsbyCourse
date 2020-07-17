@@ -1,8 +1,9 @@
-import React from "react"
-import Layout from "../components/Layout"
+import React from 'react'
+import Layout from '../components/Layout'
 /*import Images from "../examples/Images"*/
-import StyledHero from "../components/StyledHero"
-import { graphql } from "gatsby"
+import StyledHero from '../components/StyledHero'
+import { graphql } from 'gatsby'
+import BlogList from '../components/Blog/BlogList'
 
 const blog = ({ data }) => {
   return (
@@ -10,6 +11,7 @@ const blog = ({ data }) => {
       <StyledHero img={data.blogBcg.childImageSharp.fluid}></StyledHero>
       {/*<h1> title: {data.site.siteMetadata.title}</h1>*/}
       {/*<Images></Images>*/}
+      <BlogList></BlogList>
     </Layout>
   )
 }
