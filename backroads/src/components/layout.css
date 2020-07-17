@@ -84,6 +84,10 @@ main {
     flex-direction: column;
 }
 
+.rich {
+    background-color: var(--primaryColor);
+}
+
 
 /* .gatsby-image-wrapper {
   max-height: 600px;

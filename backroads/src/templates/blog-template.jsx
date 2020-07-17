@@ -11,7 +11,43 @@ const Blog = ({ data }) => {
     published,
     text: { json }
   } = data.post
+  const options = {
+    renderNode: {
+      'embedded-asset-block': node => {
+        return (
+          <div className='rich'>
+            <h3>this is awesome image</h3>
+            <img width='400' src={node.data.target.fields.file['en-US'].url} />
+            <p>images provided by john doe</p>
+          </div>
+        )
+      },
+      'embedded-entry-block': node => {
+        const { title, image, text } = node.data.target.fields
+        console.log(text)
 
+        return (
+          <div>
+            <br />
+            <br />
+            <br />
+            <br />
+            <h1>this is other post : {title['en-US']}</h1>
+            <img
+              width='400'
+              src={image['en-US'].fields.file['en-US'].url}
+              alt=''
+            />
+            {documentToReactComponents(text['en-US'])}
+            <br />
+            <br />
+            <br />
+            <br />
+          </div>
+        )
+      }
+    }
+  }
   return (
     <Layout>
       <section className={styles.blog}>
@@ -19,7 +55,7 @@ const Blog = ({ data }) => {
           <h1>{title}</h1>
           <h4>published at : {published}</h4>
           <article className={styles.post}>
-            {documentToReactComponents(json)}
+            {documentToReactComponents(json, options)}
           </article>
           <AniLink fade to='/blog' className='btn-primary'>
             all posts
