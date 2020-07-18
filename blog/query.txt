@@ -45,3 +45,15 @@
   }
 }
 
+{
+  allMdx{
+    edges{
+      node{
+        frontmatter{
+          slug
+        }
+      }
+    }
+  }
+}
+

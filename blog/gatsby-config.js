@@ -16,7 +16,15 @@ module.exports = {
                 path: `src/posts`,
             },
         },
-        `gatsby-plugin-mdx`,
+        {
+            resolve: `gatsby-plugin-mdx`,
+            options: {
+                gastbyRemarkPlugins: [{
+                    resolve: "gatsby-remark-images",
+                }, ],
+            },
+        },
+
         `gatsby-plugin-playground`,
     ],
 }
