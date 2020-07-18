@@ -20,3 +20,28 @@
     }
   }
 }
+
+{
+  allMdx(sort:{fields:frontmatter___date,order:DESC}) {
+    totalCount
+    edges {
+      node {
+        frontmatter {
+          title
+          slug
+          date(formatString:"MMM Do YYYY")
+          author
+          image {
+            childImageSharp {
+              fluid {
+                srcSet
+              }
+            }
+          }
+        }
+        excerpt
+      }
+    }
+  }
+}
+
