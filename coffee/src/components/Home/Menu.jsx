@@ -35,7 +35,7 @@ export default class Menu extends Component {
                         <h6 className="mb-0">
                           <small className="text-capitalize">{node.name}</small>
                         </h6>
-                        <h6 className="mb-0">${node.price}</h6>
+                        <h6 className="mb-0 text-yellow">${node.price}</h6>
                       </div>
                       <p className="text-muted">
                         <small>{node.description.description}</small>
