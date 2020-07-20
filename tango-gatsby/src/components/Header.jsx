@@ -48,9 +48,9 @@ const Header = () => {
               <img src={tangoLogo} alt={site.siteMetadata.title} />
             </Link>
           </div>
-        </div>
-        <div className="col-md-8 menu">
-          <Navigation menu={menu} />
+          <div className="col-md-8 menu">
+            <Navigation menu={menu} />
+          </div>
         </div>
       </div>
     </HeaderWrapper>
